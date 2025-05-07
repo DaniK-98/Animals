@@ -10,6 +10,7 @@ function getRandomAnimal(){
 }
 
 function App() { 
+
   const [animals, setAnimals] =useState ([])
 
   const handleClick = () => {
@@ -17,7 +18,7 @@ function App() {
   }
 
   const getRandomAnimal = animals.map((animal,index) => {
-    return <animalshow type=(animal) key={index} />
+    return <animalshow type={animal} key={index} />
   })
   
 
@@ -27,7 +28,7 @@ function App() {
     <div className='animals-list'>
       {renderedAnimals}
     </div>
-    <div/>
+    </div>
     
   )
 }
