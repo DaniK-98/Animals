@@ -4,17 +4,17 @@
   align-items: center;
 }
 
-button{
+.button{
   background-color: lightgreen;
   border: 1px solid green;
   border-radius: 5px;
   font-size: 20px;
-  padding: 10%;
-  width: 10%;
+  padding: 10px;
+  width: 30%;
   cursor: pointer;
 }
 
-.animal.list{
+.animals-list{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
