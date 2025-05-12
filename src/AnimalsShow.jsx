@@ -20,7 +20,7 @@ const svgMap = {
 }
 
 function AnimalSshow({type}){
-    const [click, setClicks] = useState(0)
+    const [clicks, setClicks] = useState(0)
 
     const handleClick = () => {
         setClicks(clicks + 1)
