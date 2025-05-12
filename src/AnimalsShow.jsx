@@ -10,43 +10,43 @@ import horse from './assets/svg/horse.svg'
 
 import './AnimalsShow.css'
 
-const svgMap = {
+const svgMap ={
     bird,
     dog,
     cat,
     cow,
     gator,
-    horse
+    heart,
+    horse,
 }
 
-function AnimalSshow({type}){
+function AnimalsShow({type}){
     const [clicks, setClicks] = useState(0)
 
     const handleClick = () => {
-        setClicks(clicks + 1)
+        setClicks (clicks +1)
     }
+
     console.log(type)
 
     return(
         <div
-        onClick={handleClick}
-        className="animal-show"
+            onClick={handleClick}
+            className="animal-show"
         >
-            <img 
-            src={svgMap[type]}
-            alt="animal"
-            className="animal"
-            >
-                <img
+            <img
+                src={svgMap[type]}
+                alt="animal"
+                className="animal"
+            />
+            <img
                 src={heart}
                 alt="heart"
-                style={{width: 10 + 10 * clicks + 'px'}}
+                style={{width: 10+10 * clicks + 'px'}}
                 className="heart"
-                >
-                </img>
-            </img>
+            />
         </div>
     )
 }
 
-export default AnimalSshow
+export default AnimalsShow
