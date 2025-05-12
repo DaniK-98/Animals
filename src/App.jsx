@@ -1,36 +1,35 @@
-import { useState } from 'react'
+import {useState} from 'react'
 import './App.css'
 
-import animalshow from './animalshow'
+import AnimalsShow from './AnimalsShow'
 
 function getRandomAnimal(){
-  const animals = ['cat','bird','cow','dog','gator','react']
+  const animals = ['cat','bird','cow','dog','gator','horse']
 
   return animals[Math.floor(Math.random() * animals.length)]
 }
 
-function App() { 
-
-  const [animals, setAnimals] =useState ([])
+function App(){
+  const [animals, setAnimals] = useState([])
 
   const handleClick = () => {
-    setAnimals([...animals,getRandomAnimal])
+    setAnimals([...animals, getRandomAnimal()])
   }
 
-  const getRandomAnimal = animals.map((animal,index) => {
-    return <animalshow type={animal} key={index} />
+  const renderedAnimals = animals.map((animal,index) => {
+    return <AnimalsShow type={animal} key={index}/>
   })
-  
 
-  return (
+
+  return(
     <div className='app'>
-    <button onClick={handleClick}>Add animal</button>
-    <div className='animals-list'>
-      {renderedAnimals}
+      <button onClick={handleClick}>Add Animal</button>
+      <div className='animals-list'>
+        {renderedAnimals}
+      </div>
     </div>
-    </div>
-    
   )
 }
 
-export default App 
+export default App
+ 
